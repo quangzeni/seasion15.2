@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Student Management </h2>
+    <label for="a">Student Id</label>
+    <input type="text" id="inputId"><br>
+    <label for="b">Student Name</label>
+    <input type="text" id="inputName"><br>
+    <label for="c">Age</label>
+    <input type="text" id="age"><br>
+    <label for="d">Phone</label>
+    <input type="text" id="phone"><br>
+    <label for="e">Email</label>
+    <input type="text" id="email"><br>
+    <button id="button">Create</button>
+    <p id="display"></p>
+    <script>
+        let inputId = document.getElementById("inputId");
+        let inputName = document.getElementById("inputName");
+        let age = document.getElementById("age");
+        let phone = document.getElementById("phone");
+        let email = document.getElementById("email");
+        let button = document.getElementById("button");
+        let display = document.getElementById("display");
+        button.addEventListener("click", () => {
+            let value1 = inputId.value;
+            let value2 = inputName.value;
+            let value3 = age.value;
+            let value4 = phone.value;
+            let value5 = email.value;
+
+            if (value1.length === 6) {
+                let newItem = document.createElement("p");
+                newItem.innerText = value1;
+                display.appendChild(newItem);
+            }
+            else{
+                alert("Bạn hãy nhập lại Mã Sinh Viên");
+            }
+            if (value2 !== "null") {
+                let newItem = document.createElement("p");
+                newItem.innerText = value2;
+                display.appendChild(newItem);
+            }
+            else{
+                alert("Bạn hãy nhập lại Tên Sinh Viên");
+            }
+            if(value3>=18){
+                let newItem = document.createElement("p");
+                newItem.innerText = value3;
+                display.appendChild(newItem);
+            }
+            else{
+                alert("Bạn hãy nhập lại Tuổi Sinh Viên");
+            }
+            if(value4.length<=10){
+                let newItem = document.createElement("p");
+                newItem.innerText = value4;
+                display.appendChild(newItem);
+            }
+            else{
+                alert("Bạn hãy nhập lại Phone Sinh Viên");
+            }
+            // cắt chuỗi abc@gmail.com với 10 ký tự cuối cùng
+            if(value5.slice(-10) ==="@gmail.com"){
+                let newItem = document.createElement("p");
+                newItem.innerText = value5;
+                display.appendChild(newItem);
+            }
+            else{
+                alert("Bạn hãy nhập lại Email cho đúng định dạng");
+            }
+
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="baitap1">
+        <form id="form" action="">
+            <label for="search">Nhập nội dung tìm kiếm</label>
+            <input type="text" name="search" id="search">
+            <a id="linkElement" href="#">Tìm kiếm nâng cao</a>
+            <select name="clother" id="select" style="display: none;">
+                <option value="quanao">Quần áo</option>
+            </select>
+            <br>
+            <br>
+            <button>Tìm kiếm</button>
+        </form>
+    </div>
+    <script>
+        let linkElement = document.getElementById("linkElement");
+        let form = document.getElementById("form");
+        let select = document.getElementById("select");
+        linkElement.addEventListener("click", () => {
+            if (select.style.display === "none") {
+                select.style.display = "block";
+                linkElement.innerText = "Ẩn tìm kiếm nâng cao";
+            }
+            else{
+                select.style.display = "none";
+                linkElement.innerText = "Tìm kiếm nâng cao"
+            }
+        })
+    </script>
+</body>
+
+</html>

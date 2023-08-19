@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="r1">Rikkei Academy</button>
+    <button id="r2">Welcome</button>
+    <button id="r3">Hello</button>
+    <script>
+        let r1 = document.getElementById("r1");
+        r1.onclick = ()=>{
+            alert("Học viên Rikkei");
+        };
+        let r2 = document.getElementById("r2");
+        r2.onclick = ()=>{
+            alert("Chao mung den ngoi nha Rikeei");
+        };
+        let r3 = document.getElementById("r3");
+        // r3.onclick = ()=>{
+        //     alert("Chao cac ban hoc vien Fukuoka");
+        // };
+        r3.addEventListener("click",()=>{
+            alert("Chao cac ban hoc vien Fukuoka");
+        })
+    </script>
+</body>
+
+</html>

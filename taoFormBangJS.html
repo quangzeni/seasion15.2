@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ra">
+        <!-- them thẻ h2 có nội dung rikkei -->
+    </div>
+    <script>
+        let ra = document.getElementById("ra");
+        // let h2Ra = document.createElement("h2");
+        // h2Ra.innerText = "Rikkei";
+        // ra.appendChild(h2Ra);
+        // let buttonRa = document.createElement("button");
+        // buttonRa.innerText = "rekkei";
+        // ra.appendChild(buttonRa);
+        // let buttonRe = document.createElement("button");
+        // buttonRe.innerText = "Quang";
+        // ra.replaceChild(buttonRe,buttonRa);
+        let form = document.createElement("form");
+        form.setAttribute("action","");
+        form.setAttribute("method","post");
+        ra.appendChild(form);
+        
+        let laber1 = document.createElement("laber");
+        laber1.innerText = "User Name "
+        laber1.setAttribute("for","userName");
+        form.appendChild(laber1);
+
+        let input1 = document.createElement("input");
+        input1.setAttribute("type","text");
+        input1.setAttribute("user","userName");
+        input1.setAttribute("id","userName");
+        form.appendChild(input1);
+
+        let br = document.createElement("br");
+        form.appendChild(br);
+
+
+        let laber2 = document.createElement("laber");
+        laber2.innerText = "Pasword "
+        laber2.setAttribute("for","pasword");
+        form.appendChild(laber2);
+
+        let input2 = document.createElement("input");
+        input2.setAttribute("type","text");
+        input2.setAttribute("user","pasword");
+        input2.setAttribute("id","pasword");
+        form.appendChild(input2);
+
+        let br2 = document.createElement("br");
+        form.appendChild(br2);
+
+        let input3 = document.createElement("input");
+        input3.setAttribute("type","submit");
+        input3.setAttribute("value","login");
+        form.appendChild(input3);
+
+        // có thể sử dụng template Literal. bằng cách nhét code HMTL vào trong dấu ``sau innerHTML
+        // console.log(document.head);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="a">Nhập gì cũng được. Cấm viết bậy</label><br>
+    <input type="text" id="input">
+    <button id="button">Create</button>
+    <div id="display"></div>
+    <script>
+        let button = document.getElementById("button");
+        button.addEventListener("click", () => {
+            let input = document.getElementById("input");
+            let newItem = document.createElement("p")
+            newItem.innerText = input.value;
+            let display = document.getElementById("display");
+            display.appendChild(newItem);
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Create New Item</h2>
+        <label for="item" id="item">Item</label>
+        <input type="text" name="input" id="input">
+        <button id="button">Add</button>
+        <ul id="list"></ul>
+    </div>
+    <script>
+        const input = document.getElementById("input");
+        const button = document.getElementById("button");
+        const list = document.getElementById("list");
+        var br = document.createElement("br");
+        button.addEventListener("click", () => {
+            var value = input.value;
+            if (value === "") {
+                input.style.backgroundColor = "yellow"
+            }
+            else {
+                let newItem = document.createElement("li");
+                newItem.innerText = value;
+                list.appendChild(newItem);
+            }
+        })
+    </script>
+</body>
+</html>
