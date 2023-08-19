@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="a">Nhập 2 số, tính tổng</label><br>
+    <input type="number" id="input1">
+    <input type="number" id="input2">
+    <input type="number" id="sum">
+    <button id="button">Sumary</button>
+    <script>
+        let button = document.getElementById("button");
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+        let sum = document.getElementById("sum");
+        button.addEventListener("click", () => {
+            let summuri = Number(input1.value) + Number(input2.value);
+            let newItem = document.createElement("p");
+            newItem.innerText = summuri;
+            // sum.appendChild(newItem);
+            sum.value = summuri;
+        })
+    </script>
+</body>
+
+</html>
